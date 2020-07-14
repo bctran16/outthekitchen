@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand:wght@500&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0; 
+    background-color: transparent;
+}
+
+
+li, a {
+    font-family: 'PT Serif', serif;
+    font-size: 16px;
+    color: black;
+
+}
+
+.container {
+    display:grid; 
+    grid-template-rows: 400px 100px 20px 350px 100px;
+    grid-template-areas: 
+    "top" "middle-top" "middle-bottom" "bottom";
+}
+
+.timeline {
+    display: flex;
+    position: relative;
+    text-align: center;
+    height: 100%;
+    grid-area: top;
+}
+header {
+    display: flex; 
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a {
+    transition: all 0.5s ease-out;
+    text-decoration: none;
+
+}
+
+.nav__links li a:hover {
+    color: grey;
+}
+.header-image {
+    max-width: 100%;
+    object-fit: cover;
+}
+.timeline-text h1 {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+.description {
+    grid-area: middle-top;
+    padding: 30px;
+}
+
+.description p {
+    text-emphasis: none;
+    font-weight: 500;
+    font-size: x-large;
+    text-align: center;
+    font-family: 'Cedarville Cursive', cursive;
+
+}
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.blog-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 150px;
+    margin-right: 150px; 
+    margin-bottom: 50px;
+    margin-top: 30px;
+
+
+}
+.post{
+    border: 2px solid red;
+    text-align: center;
+    width: 300px;
+}
+.socials{
+    display: flex;
+    border: 2px solid red;
+    flex-direction: row;
+    padding: 10px 5%;
+}
+
+.socials li {
+    display: inline-block;
+    padding: 5px 20px;
+}
