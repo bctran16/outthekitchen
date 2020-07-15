@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=PT+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
 
 
@@ -9,13 +10,14 @@
     margin: 0; 
     padding: 0; 
     background-color: transparent;
+    list-style: none;
 }
 
 
 li, a {
     font-family: 'PT Serif', serif;
     font-size: 16px;
-    color: black;
+    color: darkslategrey;
 
 }
 
@@ -23,7 +25,7 @@ li, a {
     display:grid; 
     grid-template-rows: 400px 100px 20px 350px 100px;
     grid-template-areas: 
-    "top" "middle-top" "middle-bottom" "bottom";
+    "top" "middle-top" "middle-mid" "middle-bottom" "bottom";
 }
 
 .timeline {
@@ -39,7 +41,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 10%;
+    padding: 15px 3%;
 }
 
 .nav__links li {
@@ -66,8 +68,10 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: transparent;
-    font-size: 50px;
+    font-size: 70px;
     font-family: 'Montserrat', sans-serif;
+    color: white;
+
 }
 .description {
     grid-area: middle-top;
@@ -96,22 +100,72 @@ hr {
     margin-right: 150px; 
     margin-bottom: 50px;
     margin-top: 30px;
+    grid-area: middle-bottom;
 
 
 }
 .post{
-    border: 2px solid red;
     text-align: center;
-    width: 300px;
-}
-.socials{
-    display: flex;
-    border: 2px solid red;
-    flex-direction: row;
-    padding: 10px 5%;
+    width: 350px;
 }
 
-.socials li {
-    display: inline-block;
-    padding: 5px 20px;
+.post {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.post img{
+    max-width: 350px;
+    height: auto;
+
+}
+
+.post h3{
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: xx-large;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 600;
+}
+
+.button {
+    border-color: transparent;
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    color:ivory ;
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 18px;
+
+}
+
+.button:hover {
+    color: lightskyblue;
+}
+
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    grid-area: bottom;
+}
+
+.socials li a{
+    position: relative;
+    display: block;
+    color: black;
+    font-size: 25px;
+    height: 50px;
+    width: 50px;
+    background-color: slategray;
+    line-height: 50px;
+    border-radius: 50%;
+    margin: 0 15px;
+    text-decoration: none;
+    
 }
