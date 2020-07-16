@@ -11,18 +11,31 @@ li, a {
     font-size: 16px;
     color: black;
 }
+
+.background {
+    margin: 0px 0px 0px;
+    background-image: url(/images/IMG_1019\ 2.JPG);
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    width:auto;
+}
 .container {
     display: grid; 
-    grid-template-rows: 50px 250px 500px 100px;
+    grid-template-rows: 100px 500px 80px;
     grid-template-areas: 
-    "top" "middle-top" "middle-bottom" "bottom";
+    "middle-top" "middle-bottom" "bottom";
+    background-color:white;
+    border: red solid 2px;
+    margin: 0px 15% 0px;
 }
 .timeline {
     display: flex;
     position: relative;
     text-align: center;
-    height: 100%;
+    height: 40px;
     grid-area: top;
+    background-color: whitesmoke;
 }
 header {
     display: flex; 
@@ -30,7 +43,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 3%;
+    padding: 10px 10%;
 }
 
 .nav__links li {
@@ -41,7 +54,7 @@ header {
 .nav__links li a {
     transition: all 0.5s ease-out;
     text-decoration: none;
-    color: white;
+    color: black;
 
 }
 
@@ -56,14 +69,36 @@ header {
 .title {
     grid-area:middle-top;
     border: red solid 2px;
-    margin: 10px 15% 5px;
 }
 .content {
     grid-area: middle-bottom;
     border: red solid 2px;
-    margin: 10px 15% 5px;
+    margin: 15px 0% 0px;
 }
 footer {
     grid-area: bottom;
     border: red solid 2px;
+    margin: 0px; 
+}
+.socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    grid-area: bottom;
+}
+
+.socials li a{
+    position: relative;
+    display: block;
+    color: black;
+    font-size: 25px;
+    height: 50px;
+    width: 50px;
+    background-color: slategray;
+    line-height: 50px;
+    border-radius: 50%;
+    margin: 10px 15px;
+    text-decoration: none;
+    
 }
