@@ -20,7 +20,7 @@ li, a {
     background-size: cover;
     background-position: center;
     height: 800px;
-    width:auto;
+    width: auto;
 }
 .container {
     display: grid; 

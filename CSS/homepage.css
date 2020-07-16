@@ -19,12 +19,14 @@ li, a {
     color: darkslategrey;
 
 }
-
 .container {
-    display:grid; 
-    grid-template-rows: 400px 100px 20px 350px 100px;
+    display: grid; 
+    grid-template-rows: 400px 100px 20px 900px 100px;
     grid-template-areas: 
     "top" "middle-top" "middle-mid" "middle-bottom" "bottom";
+    width: auto;
+    max-width: 100%;
+    background-size: cover;
 }
 
 .timeline {
@@ -32,6 +34,8 @@ li, a {
     position: relative;
     text-align: center;
     height: 100%;
+    max-width: 100%;
+    width: auto;
     grid-area: top;
 }
 header {
@@ -40,7 +44,8 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 3%;
+    padding: 10px 3%;
+    width: auto;
 }
 
 .nav__links li {
@@ -59,6 +64,7 @@ header {
 }
 .header-image {
     max-width: 100%;
+    width: auto;
     object-fit: cover;
 }
 .timeline-text h1 {
@@ -67,38 +73,42 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: transparent;
-    font-size: 70px;
+    font-size: 60px;
     font-family: 'Montserrat', sans-serif;
     color: white;
+    width: auto;
 
 }
 .description {
     grid-area: middle-top;
+    display: flex;
     padding: 30px;
+    width: auto;
 }
 
 .description p {
     text-emphasis: none;
     font-weight: 500;
-    font-size: x-large;
+    font-size: large;
     text-align: center;
     font-family: 'Cedarville Cursive', cursive;
+    width: auto;
 
 }
 hr {
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    max-width: 100%;
+    width: auto;
 }
 
 .blog-cards {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: 150px;
-    margin-right: 150px; 
-    margin-bottom: 50px;
-    margin-top: 30px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 15% 20px;
     grid-area: middle-bottom;
 
 
@@ -106,9 +116,6 @@ hr {
 .post{
     text-align: center;
     width: 350px;
-}
-
-.post {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -167,4 +174,317 @@ hr {
     margin: 0 15px;
     text-decoration: none;
     
+}
+
+@media (min-width: 601px) and (max-width:900px)
+{
+.container {
+    display: grid; 
+    grid-template-rows: 400px 100px 20px 900px 100px;
+    grid-template-areas: 
+    "top" "middle-top" "middle-mid" "middle-bottom" "bottom";
+    width: auto;
+    max-width: 100%;
+    background-size: cover;
+}
+
+.timeline {
+    display: flex;
+    position: relative;
+    text-align: center;
+    height: 100%;
+    width: auto;
+    grid-area: top;
+}
+header {
+    display: flex; 
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 3%;
+    width: auto;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a {
+    transition: all 0.5s ease-out;
+    text-decoration: none;
+
+}
+
+.nav__links li a:hover {
+    color: grey;
+}
+.header-image {
+    max-width: 100%;
+    width: auto;
+    object-fit: cover;
+}
+.timeline-text h1 {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    font-size: 60px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    width: auto;
+
+}
+.description {
+    grid-area: middle-top;
+    display: flex;
+    padding: 30px;
+    width: auto;
+}
+
+.description p {
+    text-emphasis: none;
+    font-weight: 500;
+    font-size: large;
+    text-align: center;
+    font-family: 'Cedarville Cursive', cursive;
+    width: auto;
+
+}
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    max-width: 900px;
+    width: auto;
+}
+
+.blog-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 15% 20px;
+    grid-area: middle-bottom;
+
+
+}
+.post{
+    text-align: center;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.post img{
+    max-width: 350px;
+    height: auto;
+
+}
+
+.post h3{
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: xx-large;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 600;
+}
+
+.button {
+    border-color: transparent;
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    color:ivory ;
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 18px;
+
+}
+
+.button:hover {
+    color: lightskyblue;
+}
+
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    grid-area: bottom;
+}
+
+.socials li a{
+    position: relative;
+    display: block;
+    color: black;
+    font-size: 25px;
+    height: 50px;
+    width: 50px;
+    background-color: slategray;
+    line-height: 50px;
+    border-radius: 50%;
+    margin: 0 15px;
+    text-decoration: none;
+    
+}
+}
+@media (min-width: 900px){
+.container {
+    display:grid; 
+    grid-template-rows: 400px 100px 20px 350px 100px;
+    grid-template-areas: 
+    "top" "middle-top" "middle-mid" "middle-bottom" "bottom";
+    max-width: 100%;
+    height: auto;
+}
+
+.timeline {
+    display: flex;
+    position: relative;
+    text-align: center;
+    grid-area: top;
+    max-width: 100%;
+    height: auto;
+}
+header {
+    display: flex; 
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 2%;
+    width: 20%;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a {
+    transition: all 0.5s ease-out;
+    text-decoration: none;
+
+}
+
+.nav__links li a:hover {
+    color: grey;
+}
+.header-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.timeline-text h1 {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    font-size: 70px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+
+}
+.description {
+    grid-area: middle-top;
+    padding: 30px;
+    max-width: 100%;
+    height: auto;
+}
+
+.description p {
+    text-emphasis: none;
+    font-weight: 500;
+    font-size: x-large;
+    text-align: center;
+    font-family: 'Cedarville Cursive', cursive;
+    max-width: 100%;
+    height: auto;
+
+}
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    max-width: 100%;
+}
+
+.blog-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px 10% 30px;
+    grid-area: middle-bottom;
+
+
+}
+.post{
+    text-align: center;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.post img{
+    max-width: 350px;
+    height: auto;
+
+}
+
+.post h3{
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: xx-large;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 600;
+}
+
+.button {
+    border-color: transparent;
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    color:ivory ;
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 18px;
+
+}
+
+.button:hover {
+    color: lightskyblue;
+}
+
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    grid-area: bottom;
+}
+
+.socials li a{
+    position: relative;
+    display: block;
+    color: black;
+    font-size: 25px;
+    height: 50px;
+    width: 50px;
+    background-color: slategray;
+    line-height: 50px;
+    border-radius: 50%;
+    margin: 0 15px;
+    text-decoration: none;
+    
+}
 }
