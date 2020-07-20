@@ -53,6 +53,7 @@ header {
 }
 .profile {
     display:flex; 
+    flex-direction: column;
     grid-area: top;
     justify-content: center;
     align-items: center;
@@ -61,6 +62,9 @@ header {
 .profile img {
     max-height:180px;
     border-radius: 50% 50% ;
+}
+.profile h2 {
+    margin: 10px;
 }
 .bio {
     grid-area: mid;
@@ -94,6 +98,12 @@ footer {
     border-radius: 50%;
     margin: 15px 15px 15px;
     text-decoration: none;
+}
+
+blockquote {
+    margin: 5px 5px 5px; 
+    background-color: lightgrey;
+
 }
 @media (min-width: 600px){
 .timeline {
@@ -138,6 +148,7 @@ header {
 }
 .profile {
     display:flex; 
+    flex-direction: column;
     grid-area: top;
     justify-content: center;
     align-items: center;
@@ -179,5 +190,10 @@ footer {
     border-radius: 50%;
     margin: 15px 15px 15px;
     text-decoration: none;
+}
+blockquote {
+    margin: 5px 5px 5px; 
+    background-color: lightgrey;
+
 }
 }
